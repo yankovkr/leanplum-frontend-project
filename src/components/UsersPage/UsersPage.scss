@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.master-detail-container {
+  display: flex;
+}
+
+.users-list {
+  background-color: #f6f9fb;
+  width: 40%;
+}
+
+.user-details {
+  width: 60%;
+}
+
+.spinner-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: $sm solid #f3f3f3;
+  border-top: $sm solid #3498db;
+  border-radius: 50%;
+  width: $spinner-dimensions;
+  height: $spinner-dimensions;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.details-header {
+  padding: $lg;
+}
+
+.tile-container {
+  display: flex;
+  justify-content: space-between;
+  padding: $md;
+}
+
+table {
+  padding: $md;
+  width: 100%;
+}
+
+th,
+td {
+  padding: $md $lg;
+  text-align: left;
+  border-bottom: $border solid #e1e4e5;
+}
+
+th {
+  color: #b2b7b9;
+  font-weight: normal;
+}

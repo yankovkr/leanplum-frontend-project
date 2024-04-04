@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.tile {
+  background-color: $lighter-gray;
+  padding: $md $lg;
+  width: 25%;
+  border-radius: $xs;
+  box-shadow: 0 $sm $box-shadow 0 rgba(0, 0, 0, 0.05);
+}
+
+.tile-value {
+  font-size: $tile-value;
+  font-weight: bold;
+  padding-top: $sm;
+}

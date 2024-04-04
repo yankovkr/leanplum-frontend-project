@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.list-header {
+  padding: $lg;
+  border-bottom: $border solid #b2b7b9;
+}
+
+ul {
+  padding: $md;
+  height: 100vh;
+  overflow-y: scroll;
+  list-style-type: none;
+}
+
+.user {
+  border: $border solid transparent;
+  padding-bottom: $sm;
+}
+
+.user-id {
+  font-size: $user-id-list;
+  font-weight: bold;
+  padding: $sm;
+}
+
+.user .subtitle {
+  padding: 0 $sm;
+}
+
+.selected-user {
+  border-color: black;
+  border-radius: $xs;
+}
