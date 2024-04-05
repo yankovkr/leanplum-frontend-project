@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/leanplum-frontend-project/static/css/main.27a599b4.css",
-    "main.js": "/leanplum-frontend-project/static/js/main.a6916b89.js",
+    "main.js": "/leanplum-frontend-project/static/js/main.9fb7d4e9.js",
     "static/js/453.04eb2098.chunk.js": "/leanplum-frontend-project/static/js/453.04eb2098.chunk.js",
     "index.html": "/leanplum-frontend-project/index.html",
     "main.27a599b4.css.map": "/leanplum-frontend-project/static/css/main.27a599b4.css.map",
-    "main.a6916b89.js.map": "/leanplum-frontend-project/static/js/main.a6916b89.js.map",
+    "main.9fb7d4e9.js.map": "/leanplum-frontend-project/static/js/main.9fb7d4e9.js.map",
     "453.04eb2098.chunk.js.map": "/leanplum-frontend-project/static/js/453.04eb2098.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27a599b4.css",
-    "static/js/main.a6916b89.js"
+    "static/js/main.9fb7d4e9.js"
   ]
 }
