@@ -1,0 +1,9 @@
+{
+  "ATTRIBUTE": "Attribute",
+  "VALUE": "Value",
+  "DEVICES": "Devices",
+  "SESSIONS": "Sessions",
+  "USERS_IN_AUDIENCE": "Users in Audience",
+  "TOTAL_USERS": "Total Users",
+  "SHOWING_MATCHING_USERS": "Showing {{usersLength}} matching users"
+}

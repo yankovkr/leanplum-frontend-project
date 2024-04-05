@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { UserEntity } from '../../models/UserEntity';
 import { UsersListProps } from '../../models/UsersListProps.interface';
 import './UsersList.scss';
@@ -21,15 +22,17 @@ import './UsersList.scss';
  * ```
  */
 export default function UsersList(props: UsersListProps) {
+  const { t } = useTranslation();
   return (
     <>
       <div className='list-header'>
-        <h2 className='title'>Users in Audience</h2>
+        <h2 className='title'>{t('USERS_IN_AUDIENCE')}</h2>
         <h3
           className='subtitle'
           data-testid='subtitle'
         >
-          Total Users - Showing {props.users.length} matching users
+          {t('TOTAL_USERS')} -{' '}
+          {t('SHOWING_MATCHING_USERS', { usersLength: props.users.length })}
         </h3>
       </div>
       <ul data-testid='users-list'>
@@ -55,8 +58,8 @@ export default function UsersList(props: UsersListProps) {
                 aria-label={`${user.devices} Devices - ${user.sessions.length} Sessions -{' '}
                 ${user.location}`}
               >
-                {user.devices} Devices - {user.sessions.length} Sessions -{' '}
-                {user.location}
+                {user.devices} {t('DEVICES')} - {user.sessions.length}{' '}
+                {t('SESSIONS')} - {user.location}
               </div>
             </div>
           </li>

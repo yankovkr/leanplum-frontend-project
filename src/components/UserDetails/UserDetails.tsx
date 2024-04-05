@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Tile from '../Tile/Tile';
 import './UserDetails.scss';
 import { UserEntity } from '../../models/UserEntity';
@@ -17,6 +18,7 @@ import { UserEntity } from '../../models/UserEntity';
  * ```
  */
 export default function UserDetails({ user }: { user: UserEntity }) {
+  const { t, i18n } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -26,21 +28,18 @@ export default function UserDetails({ user }: { user: UserEntity }) {
     }, 1000);
   }, []);
 
-  // Date format options
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   };
   const userCreated = new Date(user.created);
-  // Constructing User details subtitle date/location format
   const userSubtitle = `
-    ${userCreated.toLocaleDateString('en-US', options)},
-    ${userCreated.toLocaleTimeString('en-US', { timeStyle: 'short' })} -
+    ${userCreated.toLocaleDateString(i18n.language, options)},
+    ${userCreated.toLocaleTimeString(i18n.language, { timeStyle: 'short' })} -
     ${user.location}
   `;
 
-  // Loading details state template
   if (isLoading) {
     return (
       /* The spinner can be extracted as a separete component */
@@ -93,8 +92,8 @@ export default function UserDetails({ user }: { user: UserEntity }) {
       <table aria-label='Attributes Table'>
         <thead>
           <tr>
-            <th id='attribute'>Attribute</th>
-            <th id='value'>Value</th>
+            <th id='attribute'>{t('ATTRIBUTE')}</th>
+            <th id='value'>{t('VALUE')}</th>
           </tr>
         </thead>
         <tbody>

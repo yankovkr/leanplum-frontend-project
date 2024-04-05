@@ -1,0 +1,9 @@
+{
+  "ATTRIBUTE": "Attribut",
+  "VALUE": "Wert",
+  "DEVICES": "Geräte",
+  "SESSIONS": "Sitzungen",
+  "USERS_IN_AUDIENCE": "Benutzer in der Zielgruppe",
+  "TOTAL_USERS": "Gesamtzahl der Benutzer",
+  "SHOWING_MATCHING_USERS": "Anzeigen {{usersLength}} passende Benutzer"
+}
