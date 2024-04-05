@@ -14,6 +14,8 @@ jest.mock('react-i18next', () => {
     USERS_IN_AUDIENCE: 'Users in Audience',
     TOTAL_USERS: 'Total Users',
     SHOWING_MATCHING_USERS: 'Showing 2 matching users',
+    PLEASE_SELECT_A_USER_TO_PREVIEW_DETAILS:
+      'Please select a user to preview details',
   };
   return {
     useTranslation: () => {

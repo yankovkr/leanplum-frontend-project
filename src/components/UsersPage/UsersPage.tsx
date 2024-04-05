@@ -29,11 +29,6 @@ export default function UsersPage() {
     }, 1000);
   }, []);
 
-  useEffect(() => {
-    // Pre-selecting the first user
-    setSelectedUser(users[0]);
-  }, [users]);
-
   /**
    * handleUserSelection
    *
@@ -44,7 +39,7 @@ export default function UsersPage() {
     setSelectedUser(user);
   }
 
-  // Loading page state template
+  // Loading state template
   if (isLoading) {
     /* The spinner can be extracted as a separete component */
     return (
@@ -73,12 +68,10 @@ export default function UsersPage() {
         ></UsersList>
       </div>
       <div className='user-details'>
-        {selectedUser && (
-          <UserDetails
-            key={selectedUser.id}
-            user={selectedUser}
-          />
-        )}
+        <UserDetails
+          key={selectedUser?.id}
+          user={selectedUser}
+        />
       </div>
     </div>
   );

@@ -5,5 +5,6 @@
   "SESSIONS": "Sitzungen",
   "USERS_IN_AUDIENCE": "Benutzer in der Zielgruppe",
   "TOTAL_USERS": "Gesamtzahl der Benutzer",
-  "SHOWING_MATCHING_USERS": "Anzeigen {{usersLength}} passende Benutzer"
+  "SHOWING_MATCHING_USERS": "Anzeigen {{usersLength}} passende Benutzer",
+  "PLEASE_SELECT_A_USER_TO_PREVIEW_DETAILS": "Bitte wählen Sie einen Benutzer aus, um eine Vorschau der Details anzuzeigen"
 }

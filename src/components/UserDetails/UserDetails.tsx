@@ -9,7 +9,7 @@ import { UserEntity } from '../../models/UserEntity';
  * UserDetails Component - Stateful component representing User details
  * (It is stateful only for the purpose of simulating an API call and loading state)
  *
- * @param {UserEntity} user
+ * @param {UserEntity | undefined} user
  * @return {React.ReactNode}
  * @remarks
  *  Example of usage
@@ -17,7 +17,11 @@ import { UserEntity } from '../../models/UserEntity';
  *  <UserDetails user={user} />
  * ```
  */
-export default function UserDetails({ user }: { user: UserEntity }) {
+export default function UserDetails({
+  user,
+}: {
+  user: UserEntity | undefined;
+}) {
   const { t, i18n } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,17 +32,17 @@ export default function UserDetails({ user }: { user: UserEntity }) {
     }, 1000);
   }, []);
 
-  const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  };
-  const userCreated = new Date(user.created);
-  const userSubtitle = `
-    ${userCreated.toLocaleDateString(i18n.language, options)},
-    ${userCreated.toLocaleTimeString(i18n.language, { timeStyle: 'short' })} -
-    ${user.location}
-  `;
+  if (!user) {
+    return (
+      <div data-testid='user-details'>
+        <div className='details-header'>
+          <h2 className='title'>
+            {t('PLEASE_SELECT_A_USER_TO_PREVIEW_DETAILS')}
+          </h2>
+        </div>
+      </div>
+    );
+  }
 
   if (isLoading) {
     return (
@@ -54,6 +58,19 @@ export default function UserDetails({ user }: { user: UserEntity }) {
       </div>
     );
   }
+
+  // Constructing User details subtitle date/location format
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+  const userCreated = new Date(user.created);
+  const userSubtitle = `
+    ${userCreated.toLocaleDateString(i18n.language, options)},
+    ${userCreated.toLocaleTimeString(i18n.language, { timeStyle: 'short' })} -
+    ${user.location}
+  `;
 
   return (
     <div
