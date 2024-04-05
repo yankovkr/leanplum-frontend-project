@@ -1,6 +1,6 @@
 import { render, screen, act, within, waitFor } from '@testing-library/react';
 import user from '@testing-library/user-event';
-import { UserEntity } from '../../models/UserEntity';
+import { UserEntity } from 'models/UserEntity';
 import UsersList from './UsersList';
 
 describe('UsersList Component', () => {

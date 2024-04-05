@@ -1,4 +1,4 @@
-import UsersPage from './components/UsersPage/UsersPage';
+import UsersPage from 'components/UsersPage/UsersPage';
 import './App.scss';
 
 function App() {

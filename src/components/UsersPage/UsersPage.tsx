@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import UserDetails from '../UserDetails/UserDetails';
-import UsersList from '../UsersList/UsersList';
-import { UserEntity, generateSampleData } from '../../models/UserEntity';
+import UserDetails from 'components/UserDetails/UserDetails';
+import UsersList from 'components/UsersList/UsersList';
+import { UserEntity, generateSampleData } from 'models/UserEntity';
 import './UsersPage.scss';
 
 /**

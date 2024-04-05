@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import Tile from '../Tile/Tile';
+import { UserEntity } from 'models/UserEntity';
+import Tile from 'components/Tile/Tile';
 import './UserDetails.scss';
-import { UserEntity } from '../../models/UserEntity';
 
 /**
  *

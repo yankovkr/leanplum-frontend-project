@@ -1,4 +1,4 @@
-import { TileProps } from '../../models/TileProps.interface';
+import { TileProps } from 'models/TileProps.interface';
 import './Tile.scss';
 
 /**

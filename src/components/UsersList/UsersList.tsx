@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { UserEntity } from '../../models/UserEntity';
-import { UsersListProps } from '../../models/UsersListProps.interface';
+import { UserEntity } from 'models/UserEntity';
+import { UsersListProps } from 'models/UsersListProps.interface';
 import './UsersList.scss';
 
 /**

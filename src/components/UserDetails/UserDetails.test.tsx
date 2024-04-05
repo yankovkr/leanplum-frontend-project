@@ -1,5 +1,5 @@
 import { render, screen, waitFor, within } from '@testing-library/react';
-import { UserEntity } from '../../models/UserEntity';
+import { UserEntity } from 'models/UserEntity';
 import UserDetails from './UserDetails';
 
 describe('UserDetails Component', () => {
